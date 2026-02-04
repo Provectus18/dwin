@@ -3,6 +3,7 @@ use thiserror::Error;
 use std::ffi::NulError;
 
 #[derive(Error, Debug)]
+
 pub enum DwinError {
     #[error("display {0} not found")]
     DisplayNotFound(String),
@@ -16,7 +17,7 @@ pub struct Dwin {
 }
 
 impl Dwin {
-    pub fn new(_display_name: &str) -> Result<Self, DwinError> {
+    pub fn new(display_name: &str) -> Result<Self, DwinError> {
         Ok(Dwin {})
     }
 
